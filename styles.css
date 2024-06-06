@@ -1,34 +1,39 @@
 body {
     background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
-.experience-list {
-    list-style: none;
-    padding: 0;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.experience-list li {
-    margin: 10px 0;
+.grid a {
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.experience-list a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
+.grid a:hover {
+    transform: scale(1.1);
 }
 
-.experience-list a:hover {
-    color: #f0e68c;
+.grid img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
